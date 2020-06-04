@@ -1,3 +1,7 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0+1]
 
-* TODO: Describe initial release.
+- Updating docs
+
+## [1.0.0]
+
+- First release with functional about to close widget

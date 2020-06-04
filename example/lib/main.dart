@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       ),
       home: AboutToClose(
         dialogType: DialogType.material,
-        dialogTitle: 'Want to leave the app?',
-        withAnimation: true,
+        dialogTitle:
+            'You are about to close the app. Are you sure you want to leave?',
         child: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
     );

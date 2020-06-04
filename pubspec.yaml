@@ -1,8 +1,7 @@
 name: abouttoclose
-description: A new Flutter package.
-version: 0.0.1
-author:
-homepage:
+description: Package created for giving an easy option for those who want to easily prevent the user of leaving the app by mistake.
+version: 1.0.0+1
+homepage: https://github.com/rodrigobastosv/about_to_close
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
