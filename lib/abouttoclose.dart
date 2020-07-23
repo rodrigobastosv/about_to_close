@@ -3,8 +3,12 @@ library abouttoclose;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+///Define the type of dialog that shows up to the user
 enum DialogType { material, cupertino }
 
+///Widget to control the flow of the app when the user is about to leave the
+///app. The default operation is to ask the user if he really wants to leave
+///the app.
 class AboutToClose extends StatefulWidget {
   AboutToClose({
     @required this.child,
@@ -18,14 +22,31 @@ class AboutToClose extends StatefulWidget {
     this.dialogType = DialogType.cupertino,
   });
 
+  ///Child that will be rendered
   final Widget child;
+
+  ///Title of the dialog
   final String dialogTitle;
+
+  ///Text to the no option
   final String noOption;
+
+  ///Text to the yes option
   final String yesOption;
+
+  ///Style of the no option
   final TextStyle noOptionTextStyle;
+
+  ///Style of the yes option
   final TextStyle yesOptionTextStyle;
+
+  ///Define wether animation is wanted or not
   final bool withAnimation;
+
+  ///Define animation duration
   final int animationDurationInMs;
+
+  ///Define the dialog type
   final DialogType dialogType;
 
   @override

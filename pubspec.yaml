@@ -1,6 +1,6 @@
 name: abouttoclose
 description: Package created for giving an easy option for those who want to easily prevent the user of leaving the app by mistake.
-version: 1.0.0+1
+version: 1.0.0+2
 homepage: https://github.com/rodrigobastosv/about_to_close
 
 environment:
