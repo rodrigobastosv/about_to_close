@@ -11,8 +11,8 @@ enum DialogType { material, cupertino }
 ///the app.
 class AboutToClose extends StatefulWidget {
   AboutToClose({
-    @required this.child,
-    @required this.dialogTitle,
+    required this.child,
+    required this.dialogTitle,
     this.noOption = 'No',
     this.yesOption = 'Yes',
     this.noOptionTextStyle,
@@ -35,10 +35,10 @@ class AboutToClose extends StatefulWidget {
   final String yesOption;
 
   ///Style of the no option
-  final TextStyle noOptionTextStyle;
+  final TextStyle? noOptionTextStyle;
 
   ///Style of the yes option
-  final TextStyle yesOptionTextStyle;
+  final TextStyle? yesOptionTextStyle;
 
   ///Define wether animation is wanted or not
   final bool withAnimation;
@@ -55,7 +55,7 @@ class AboutToClose extends StatefulWidget {
 
 class _AboutToCloseState extends State<AboutToClose>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -98,20 +98,20 @@ class _AboutToCloseState extends State<AboutToClose>
     );
   }
 
-  Future<bool> _showCupertinoDialog() {
-    return showCupertinoDialog(
+  Future<bool> _showCupertinoDialog() async {
+    return await showCupertinoDialog(
       context: context,
       builder: (_) => CupertinoAlertDialog(
         title: Text(widget.dialogTitle),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: Text(
               widget.noOption,
               style: widget.noOptionTextStyle,
             ),
           ),
-          FlatButton(
+          TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             child: Text(
               widget.yesOption,
@@ -123,20 +123,20 @@ class _AboutToCloseState extends State<AboutToClose>
     );
   }
 
-  Future<bool> _showMaterialDialog() {
-    return showDialog(
+  Future<bool> _showMaterialDialog() async {
+    return await showDialog(
       context: context,
       builder: (_) => AlertDialog(
         title: Text(widget.dialogTitle),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: Text(
               widget.noOption,
               style: widget.noOptionTextStyle,
             ),
           ),
-          FlatButton(
+          TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             child: Text(
               widget.yesOption,
