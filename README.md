@@ -1,3 +1,5 @@
+<a href="https://www.buymeacoffee.com/rodrigobastosv" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 #  Introduction
 
 Package created for the purpose of giving an easy option for those who want to easily prevent the user of leaving the app by mistake. AboutToClose help you to inform the user that he is about to close the app, so you give him a chance to tell if that's what he really wants to do.
